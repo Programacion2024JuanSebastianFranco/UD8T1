@@ -3,15 +3,14 @@ package t2;
 import java.util.Arrays;
 
 public class Conjunto<T> {
-    private static final int TAM = 10;
-    private T[] array = (T[]) new Object[TAM]; // Array para almacenar los elementos
 
-    // Constructor
+    private static final int TAM = 10;
+    private T[] array = (T[]) new Object[TAM];
+
     public Conjunto() {
-        Arrays.fill(array, null); // Inicializa el array con valores null
+        Arrays.fill(array, null);
     }
 
-    // a. Insertar un elemento en el primer lugar vacío
     public boolean insert(T element) {
         boolean inserted = false;
         int i = 0;
@@ -25,7 +24,6 @@ public class Conjunto<T> {
         return inserted;
     }
 
-    // b. Eliminar un elemento
     public boolean delete(T element) {
         boolean deleted = false;
         int i = 0;
@@ -39,7 +37,6 @@ public class Conjunto<T> {
         return deleted;
     }
 
-    // c. Obtener el elemento en la posición indicada
     public T get(int pos) {
         if (pos >= 0 && pos < TAM) {
             return array[pos];
@@ -47,7 +44,6 @@ public class Conjunto<T> {
         return null;
     }
 
-    // d. Buscar el elemento y devolver su posición
     public int find(T element) {
         int i = 0;
         int pos = -1;
